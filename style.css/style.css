@@ -5,7 +5,7 @@
   padding: 0;
 }
 .background__picture {
-  background-image: url(/assets/backgraunt.png);
+  background-image: url("/img/flowers-background.png");
   background-repeat: no-repeat;
   width: 1110px;
   margin: 0 auto;
