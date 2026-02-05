@@ -1,16 +1,16 @@
-* {
+*{
   font-family: Montserrat;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.background__picture {
+.background__picture{
   background-image: url("/img/flowers-background.png");
   background-repeat: no-repeat;
   width: 1110px;
   margin: 0 auto;
 }
-.header {
+.header{
   padding-top: 220px;
   font-style: normal;
   font-weight: 400;
@@ -19,12 +19,12 @@
   color: #515076;
   text-align: center;
 }
-.container {
+.product_card-container{
   margin-top: 110px;
   display: flex;
   justify-content: center;
 }
-.product_list {
+.product_list{
   display: flex;
   flex-wrap: wrap;
   justify-content: inherit;
@@ -32,19 +32,19 @@
   width: 1280px;
   list-style-type: none;
 }
-  .product_card {
+  .product_card{
     width: 340px;
     background: #F7F7FA;
     border: 1px;
     padding: 25px;
   }
-  .content {
+  .product_card-content{
     font-size: 12px;
     line-height: 24px;
     text-transform: uppercase;
     color: #A5A3B9;
   }
-  .product_name {
+  .product-card-name{
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -52,7 +52,7 @@
     color: #515076;
     padding: 5px 0 5px 0px;
   }
-  .description {
+  .product-card__description{
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -60,11 +60,11 @@
     color: #515076;
     padding: 5px 0 15px 0px;
   }
-  .compound {
+  .product-card__compound{
     color: #515076;
     padding-bottom: 5px;
   }
-  .compound_list {
+  .product-card__compound-list{
     color: #515076;
     list-style-position: inside;
     font-size: 13px;
@@ -72,7 +72,7 @@
     border: 1px;
     padding-top: 5px;
   }
-  .price {
+  .product-card__price{
     display: flex;
     justify-content: space-between;
     padding: 25px 0;
@@ -81,10 +81,10 @@
     line-height: 24px;
     color: #515076;
   }
-  .price_item {
+  .product-card__price-item{
     font-weight: normal;
     font-size: 20px;
   }
-  li {
+  li{
     padding-bottom: 5px;
   }
