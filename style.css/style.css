@@ -1,0 +1,94 @@
+*{
+  font-family:Montserrat;
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+.background__picture{
+  background-image: url("/img/flowers-background.png");
+  background-repeat: no-repeat;
+  width: 1110px;
+  margin: 0 auto;
+}
+.header{
+  padding-top: 220px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 78px;
+  color: #515076;
+  text-align: center;
+}
+.product_card-container{
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: inherit;
+  gap: 45px;
+  width: 1280px;
+  list-style-type: none;
+}
+.product_photo{
+   width: 290px;
+   height: 245px;
+}
+  .product_card{
+    width: 340px;
+    background: #F7F7FA;
+    border: 1px;
+    padding: 25px;
+  }
+  .product_card-content{
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #A5A3B9;
+  }
+  .product_card-name{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #515076;
+    padding: 5px 0 5px 0px;
+  }
+  .product_card__description{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    padding: 5px 0 15px 0px;
+  }
+  .product_card__compound{
+    color: #515076;
+    padding-bottom: 5px;
+  }
+  .product_card__compound-list{
+    color: #515076;
+    list-style-position: inside;
+    font-size: 13px;
+    font-weight: 400;
+    border: 1px;
+    padding-top: 5px;
+  }
+  .product_card__price-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #515076;
+  }
+  .product_card__price-item{
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .product_card__compound-item{
+    padding-bottom: 5px;
+  }
