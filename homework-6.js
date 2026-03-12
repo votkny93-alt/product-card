@@ -36,9 +36,9 @@ console.log(car);
 
 function showObjectProperty(obj, property) {
   console.log(obj[property]);
-}
+};
 
-showObjectProperty(car, "model")
+showObjectProperty(car, "model");
 
 // 7. Создать массив, который содержит названия продуктов (просто строки)
 
@@ -115,7 +115,7 @@ const harryPotterBooks = [
 ];
 books = [...books, ...harryPotterBooks];
 console.log(books);
-const allBooks = books.concat(harryPotterBooks)
+const allBooks = books.concat(harryPotterBooks);
 console.log(allBooks);
 
 /* 10. Почитать про метод массива — map. Написать функцию, которая принимает массив сущностей с задания №9.
@@ -123,9 +123,9 @@ console.log(allBooks);
 Что я хочу этим сказать: если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий). */
 
 function addIsRareProperty(arr) {
-  return arr.map(book => ({...book,
-    isRare: book.year <= 1990
+  return arr.map(book => ({
+    ...book, isRare: book.year <= 1990
   }));
-}
+};
 const rareBook = addIsRareProperty(books);
 console.log(rareBook);
