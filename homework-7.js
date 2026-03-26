@@ -1,7 +1,15 @@
+/*6. Сделать константу экспортируемой, добавив перед "const" ключевое слово "export".
+ Таким образом мы сможем внедрить переменную из comments.js в homework-7.js и работать с ней.
+  Когда мы введем название переменной, нам предложит импортировать ее - так и делаем.*/
+
+import { postList } from "./comments.js";
+
+console.log('Массив успешно импортирован:', postList);
+
 // 2. Создать массив чисел от 1 до 10.
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const filteredNumbers = numbers.filter(number => number > 5)
+const filteredNumbers = numbers.filter(number => number > 5);
 
 console.log(filteredNumbers);
 
@@ -13,6 +21,7 @@ const kitchenTools = ['ложка', 'вилка', 'нож', 'чайник', 'т�
 const kitchenTool = 'вилка';
 const hasItem = kitchenTools.includes(kitchenTool);
 
+console.log(kitchenTool);
 console.log(hasItem);
 
 /*4. Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный
@@ -20,21 +29,13 @@ console.log(hasItem);
 
 function reverseArray(arr) {
   return arr.reverse();
-}
+};
 
 reverseArray(numbers);
 reverseArray(kitchenTools);
 
 console.log(numbers);
 console.log(kitchenTools);
-
-/*6. Сделать константу экспортируемой, добавив перед "const" ключевое слово "export".
- Таким образом мы сможем внедрить переменную из comments.js в homework-7.js и работать с ней.
-  Когда мы введем название переменной, нам предложит импортировать ее - так и делаем.*/
-
-import { postList } from "./comments.js";
-
-console.log('Массив успешно импортирован:', postList);
 
 //7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 
@@ -47,13 +48,10 @@ console.log(comEmails);
 /*8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели
  postId: 2, а те, у кого id больше 5, имели postId: 1 */
 
-const updatedPosts = postList.map(item => {
-  if (item.id <= 5) {
-    return { ...item, postId: 2 };
-  } else {
-    return { ...item, postId: 1 };
-  }
-});
+const updatedPosts = postList.map(item => ({
+  ...item,
+  postId: item.id <= 5 ? 2 : 1
+}));
 
 console.log(updatedPosts);
 
@@ -77,16 +75,16 @@ console.log(validatedPosts);
 
 // 11. Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже самое с помощью метода map
 
-const mailArray = postList.map(item => item.email);
+const commentMails  = postList.map(item => item.email);
 
-console.log(mailArray);
+console.log(commentMails );
 
 // 12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.
 
-const iterateMailArray = mailArray.toString();
+const mailsToString = commentMails.toString();
 
-console.log(iterateMailArray);
+console.log(mailsToString);
 
-const mailString = mailArray.join('-');
+const mailsByJoin = commentMails.join('-');
 
-console.log(mailString);
+console.log(mailsByJoin);
