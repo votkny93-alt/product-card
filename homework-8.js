@@ -111,7 +111,7 @@ const harryPotterUniverse = [
 const allBooks = [...library, ...harryPotterUniverse];
 // console.log(allBooks);
 
-function checkRetroBooks(arrayOfBooks) {
+function getRetroBooks(arrayOfBooks) {
   return arrayOfBooks.map(allBooks  => {
     return {
       ...allBooks,
@@ -120,5 +120,6 @@ function checkRetroBooks(arrayOfBooks) {
   });
 }
 
-const updatedBooks = checkRetroBooks(allBooks);
+const updatedBooks = getRetroBooks(allBooks);
+
 // console.log(updatedBooks);
