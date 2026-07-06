@@ -39,7 +39,6 @@ function greet(userProfile) {
 
 greet(userProfile)
 
-
 const products = ["Молоко", "Хлеб", "Яблоки", "Сыр", "Куриное филе"];
 
 // console.log(products);
