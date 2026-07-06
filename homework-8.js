@@ -34,7 +34,7 @@ checkAddMaxSpeed(car);
 
 
 function greet(userProfile) {
-  // console.log(`Привет, ${userProfile.firstName}, ${userProfile.lastName}`)
+//  console.log(`Привет, ${userProfile.firstName}, ${userProfile.lastName}`)
 }
 
 greet(userProfile)
