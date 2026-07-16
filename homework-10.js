@@ -1,46 +1,9 @@
 
-const productCard = [
-  { 
-    name: "Увлажняющий мусс", 
-    purpose: "для нормальной кожи", 
-    description: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.", 
-    image: "img/mousse.jpg", 
-    ingredients: [ "активные натуральные комплексы", "витамины С, А, РР, В И Е", "солнцезащитные компоненты" ], 
-    price: 2750 
-  },
-  { 
-    name: "Увлажняющая маска", 
-    purpose: "для нормальной кожи", 
-    description: "Способствует удерживанию влаги в верхних слоях кожи.", 
-    image: "img/mask.jpg", 
-    ingredients: [ "воски", "минералы", "масла" ], 
-    price: 3500 
-  },
-  { 
-    name: "Гель для умывания", 
-    purpose: "для нормальной кожи", 
-    description: "Интенсивно очищает, не повреждает защитный барьер кожи.", 
-    image: "img/gel.jpg", 
-    ingredients: [ "минералы", "витамины С, А, РР, В И Е", "солнцезащитные компоненты" ], 
-    price: 1650 
-  },
-  { 
-    name: "Подарочный набор №1", 
-    purpose: "для нормальной кожи", 
-    description: "Набор, состоящий из увлажняющего крема и маски.", 
-    image: "img/gift-set1.jpg", 
-    ingredients: [ "воски", "минералы", "масла" ], 
-    price: 4750 
-  },
-  { 
-    name: "Подарочный набор №5", 
-    purpose: "для нормальной кожи", 
-    description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.", 
-    image: "img/gift-set2.jpg", 
-    ingredients: [ "воски", "минералы", "масла" ], 
-    price: 7520 
-  }
-];
+const productDescriptionsMap = productCard.reduce((accumulator, product) => { 
+  accumulator[product.name] = product.description; 
+  return accumulator; 
+}, {});
+
 // ищем классы 
 const productCardTemplate = document.getElementById('product-card-template'); 
 const productList = document.querySelector('.product-list'); 
@@ -92,7 +55,7 @@ function renderProducts(count, arrayCards) {
             //  картинка
       const imgElement = productClone.querySelector('.product-photo'); 
       if (imgElement) { 
-        imgElement.src = product.image; 
+        imgElement.src = `img/${product.image}.jpg`;
         imgElement.alt = product.name; 
       } 
             // цена
@@ -108,10 +71,5 @@ function renderProducts(count, arrayCards) {
       //  функция опроса
 const chosenCount = showCards(); 
 renderProducts(chosenCount, productCard); 
-
-const productDescriptionsMap = productCard.reduce((accumulator, product) => { 
-  accumulator[product.name] = product.description; 
-  return accumulator; 
-}, {});
 
 
