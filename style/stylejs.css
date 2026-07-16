@@ -1,4 +1,4 @@
-/* * {
+* {
   font-family: Montserrat;
   box-sizing: border-box;
   margin: 0;
@@ -23,69 +23,88 @@
   text-align: center;
 }
 
-.product-cards__container {
+.container-cards {
+  width: 1280px;
   display: flex;
   justify-content: center;
+
 }
 
 .product-list {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 45px;
   list-style-type: none;
+  gap: 45px;
+  border: 1px;
+  font-size: 14px;
+  line-height: 24px;
+
 }
 
-.product_photo {
-  width: 290px;
-  height: 245px;
-}
-
-.product-card {
+.product-container {
   width: 340px;
   background: #F7F7FA;
   border: 1px;
   padding: 25px;
 }
 
-.product-card__content {
-  font-size: 12px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: #A5A3B9;
+.product-photo {
+  width: 290px;
+  height: 245px;
+  margin-bottom: 30px;
 }
 
-.product-card__name {
+.product-name {
+  white-space: nowrap;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 27px;
   color: #515076;
   padding: 5px 0 5px 0px;
 }
 
-.product-card__description {
-  width: 287px;
+.product-purpose {
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #A5A3B9;
+  margin-bottom: 5px;
+}
+
+.product-description {
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   color: #515076;
-  padding: 5px 0 15px 0px;
+  padding: 5px 0 5% 0px;
+  
+
+}
+
+.product-ingredients {
+  width: 252px;
+  color: #515076;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px;
+  margin-bottom: 5px;
 }
 
 .product-card__compound {
+  size: 13px;
   color: #515076;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
+  white-space: nowrap;
 }
 
-.product-card__compound-list {
-  color: #515076;
+.product-card__compound-item {
   list-style-position: inside;
-  font-size: 13px;
-  font-weight: 400;
-  border: 1px;
-  padding-top: 5px;
+  margin-bottom: 5px;
+
 }
 
 .product-card__price-wrapper {
@@ -94,6 +113,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 5px;
+  
 }
 
 .product-card__price-text {
@@ -104,17 +125,11 @@
   font-weight: bold;
   line-height: 24px;
   color: #515076;
+  margin-bottom: 5px;
 }
 
 .product-card__price-item {
   font-weight: normal;
   font-size: 20px;
+  margin-bottom: 5px;
 }
-
-.product-card__compound-item {
-  padding-bottom: 5px;
-}
-
-.red-text {
-  color: red;
-} */
