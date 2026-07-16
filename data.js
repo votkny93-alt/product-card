@@ -1,4 +1,4 @@
-export const productCard = [
+export const productCards = [
   { 
     name: "Увлажняющий мусс", 
     purpose: "для нормальной кожи", 
@@ -35,7 +35,7 @@ export const productCard = [
     name: "Подарочный набор №5", 
     purpose: "для нормальной кожи", 
     description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.", 
-    image: "img/gift-set2", 
+    image: "gift-set2", 
     ingredients: [ "воски", "минералы", "масла" ], 
     price: 7520 
   }
