@@ -1,3 +1,4 @@
+import { productCard } from './data.js';
 
 const productDescriptionsMap = productCard.reduce((accumulator, product) => { 
   accumulator[product.name] = product.description; 
