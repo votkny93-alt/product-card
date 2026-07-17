@@ -38,8 +38,6 @@ function renderProducts(count, arrayCards) {
       productClone.querySelector('.product-description').textContent = product.description;
 
       const ingredientsString = productClone.querySelector('.product-ingredients');
-      if (ingredientsString);
-      
       // состав li
       const compoundList = productClone.querySelector('.product-card__compound');
       {
@@ -62,10 +60,7 @@ function renderProducts(count, arrayCards) {
         imgElement.alt = product.name;
       }
       // цена
-      const priceTextElement = productClone.querySelector('.product-card__price-text');
-      if (priceTextElement) {
-        priceTextElement.textContent = 'Цена';
-      }
+
       const priceElement = productClone.querySelector('.product-card__price-item');
       if (priceElement) {
         priceElement.textContent = product.price ? `${product.price.toLocaleString()} ₽` : '—';
