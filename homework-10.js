@@ -53,7 +53,7 @@ function renderProducts(count, arrayCards) {
           fragment.appendChild(li);
         });
         compoundList.appendChild(fragment);
-        compoundList.prepend('Состав: '); 
+        compoundList.prepend('Состав: ');
       }
       //  картинка
       const imgElement = productClone.querySelector('.product-photo');
@@ -62,6 +62,10 @@ function renderProducts(count, arrayCards) {
         imgElement.alt = product.name;
       }
       // цена
+      const priceTextElement = productClone.querySelector('.product-card__price-text');
+      if (priceTextElement) {
+        priceTextElement.textContent = 'Цена';
+      }
       const priceElement = productClone.querySelector('.product-card__price-item');
       if (priceElement) {
         priceElement.textContent = product.price ? `${product.price.toLocaleString()} ₽` : '—';
