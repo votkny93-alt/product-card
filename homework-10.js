@@ -38,11 +38,11 @@ function renderProducts(count, arrayCards) {
       productClone.querySelector('.product-description').textContent = product.description;
 
       const ingredientsString = productClone.querySelector('.product-ingredients');
-      if (ingredientsString) {
-      }
+      if (ingredientsString);
+      
       // состав li
       const compoundList = productClone.querySelector('.product-card__compound');
-      if (compoundList && Array.isArray(product.ingredients)) {
+      {
         compoundList.innerHTML = '';
         const fragment = document.createDocumentFragment();
 
@@ -57,7 +57,7 @@ function renderProducts(count, arrayCards) {
       }
       //  картинка
       const imgElement = productClone.querySelector('.product-photo');
-      if (imgElement) {
+      {
         imgElement.src = `img/${product.image}.jpg`;
         imgElement.alt = product.name;
       }
