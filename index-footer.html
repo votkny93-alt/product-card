@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style-footer.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="nav-left__column">
+        <h1 class="nav-left__title">Product Cards</h1>
+        <p class="nav-left__description">У Нас Самые Лучшие Продукты Для Кожи!</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Telegram">
+            <img src="img/logo_tm.png" alt="Telegram">
+          </a>
+          <a href="#" aria-label="VK">
+            <img src="img/logo_vk.png" alt="VK">
+          </a>
+        </div>
+      </div>
+      <div class="nav-center__column">
+        <h2 class="nav-center__title">Подпишись на наши акции:</h2>
+        <div class="subscribe-form">
+          <input type="email" class="rectangle-input" placeholder="Введите ваш Email" required>
+          <span class="divider">|</span>
+          <button type="submit" class="subscribe-button">Подписаться</button>
+        </div>
+      </div>
+      <div class="nav-right__column">
+        <h3 class="nav-right__title">Быстрые ссылки</h3>
+        <ul class="menu-list">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+
+      </div>
+    </nav>
+    <footer class="footerbar">
+      <hr class="footer-line">
+      <a href="www.product-cards.com©all right reserve" class="footer__link">www.product-cards.com©all right reserve</a>
+    </footer>
+  </div>
+  <button id="openModalBtn" class="register-btn">Регистрация</button>
+
+  <div class="modal" id="registrationModal">
+    <div class="overlay" id="modalOverlay"></div>
+
+    <div class="modal-content">
+      <button class="close-btn" id="closeModalBtn">&times;</button>
+      <h4>Регистрация</h4>
+      <form id="registerForm" novalidate>
+        <label for="regName">Имя</label>
+        <input type="text" id="regName" placeholder="Иван">
+
+        <label for="regLastName">Фамилия</label>
+        <input type="text" id="regLastName" placeholder="Иванов">
+
+        <label for="regDate">Дата рождения:</label>
+        <input type="date" id="regDate" required>
+
+        <label for="regLogin">Логин:</label>
+        <input type="text" id="regLogin" placeholder="ivan_cool">
+
+        <label for="regPassword">Пароль:</label>
+        <input type="password" id="regPassword" placeholder="Минимум 6 символов" required minlength="6">
+
+        <label for="regPasswordConfirm">Повторите пароль:</label>
+        <input type="password" id="regPasswordConfirm" placeholder="Введите пароль еще раз" required>
+
+
+        <button type="submit" class="submit-btn">Создать аккаунт</button>
+      </form>
+    </div>
+  </div>
+  <script src="register.js"></script>
+</body>
+
+</html>

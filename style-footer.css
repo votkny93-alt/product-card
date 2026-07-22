@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 1728px;
+  height: 477px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1569px;
+  height: 147px;
+  padding: 85px 75px 245px 84px;
+}
+
+.nav-left__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-left__title {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 16px;
+}
+
+.nav-left__description {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 42px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-center__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-center__title {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 13px;
+  text-align: center;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  height: 55px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.rectangle-input {
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+.divider {
+  color: #ffffff;
+  margin: 0 15px;
+  right: 20px;
+}
+
+.subscribe-button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-right__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav-right__title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 13px;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 400;
+  gap: 14px;
+}
+
+.menu-list a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footerbar {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-line {
+  width: 66px;
+  border: 1px solid #ffffff;
+  margin: 0 auto;
+}
+
+.footer__link {
+  padding-top: 33px;
+  padding-bottom: 28px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal.modal-showed {
+display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: absolute;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 40px;
+  border-radius: 12px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #333333;
+}
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  
+}
+
+#registerForm label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#registerForm input {
+  padding: 10px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #555555;
+}
+
+.register-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.submit-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  width: 400px;
+  padding: 12px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
