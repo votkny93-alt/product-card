@@ -3,7 +3,7 @@ let user = null;
 const modal = document.getElementById('registrationModal');
 const openBtn = document.getElementById('openModalBtn');
 const overlay = document.getElementById('modalOverlay');
-const modalContent = document.getElementsByClassName('.modal-content');
+const modalContent = document.getElementsByClassName('modal-content');
 const closeBtn = document.getElementById('closeModalBtn');
 const registerForm = document.getElementById('registerForm');
 
@@ -18,7 +18,6 @@ function closeModal() {
 
 closeBtn.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
-
 
 registerForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -44,6 +43,8 @@ registerForm.addEventListener('submit', function (event) {
     createdOn: new Date()
   };
 
+  closeModal();
+  alert('Регистрация прошла успешно!');
 });
 
 

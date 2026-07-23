@@ -229,6 +229,7 @@ display: block;
 .submit-btn {
   background: none;
   border: none;
+  background-color:#333333;
   color: #ffffff;
   width: 400px;
   padding: 12px 0;
