@@ -1,3 +1,6 @@
+import { Modal } from './Modal.js';
+import { Form } from './form.js'
+
 let user = null;
 
 const modal = document.getElementById('registrationModal');
@@ -45,47 +48,39 @@ registerForm.addEventListener('submit', function (event) {
 
   closeModal();
   alert('Регистрация прошла успешно!');
+
+  const isOpen = document.querySelector('.modal');
+
+  if (isOpen.classList.contains('is-open')) {
+
+  } else {
+  }
 });
 
+const regModal = new Modal('registrationModal');
+const myForm = new Form('registerForm');
 
+openBtn.addEventListener('click', () => {
+  regModal.open();
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-registerForm.addEventListener('submit', function (event) {
+registerForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const password = document.getElementById('regPassword').value;
-  const passwordConfirm = document.getElementById('regPasswordConfirm').value;
-  if (!registerForm.checkValidity()) {
-    alert('Регистрация отклонена! Заполните все обязательные поля корректно.');
-    return;
-  }
+    if (myForm.isValid) {
+    const data = myForm.getValues();
+    console.log(data);
 
-  user = {
-    name: document.getElementById('regName').value(),
-    lastName: document.getElementById('regLastName').value(),
-    birthDate: document.getElementById('regDate').value(),
-    login: document.getElementById('regLogin').value(),
-    createdOn: new Date()
-  }
+    myForm.reset()
+
+  regModal.close();
+  alert('Регистрация прошла успешно!');
+    } else {
+    alert('Пожалуйста, заполните все обязательные поля корректно!');
+    }
 });
+
+
+
+
 
