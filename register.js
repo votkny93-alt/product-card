@@ -20,17 +20,17 @@ openBtn.addEventListener('click', () => {
 registerForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
-    if (myForm.isValid) {
-    const data = myForm.getValues;
+  if (myForm.isValid()) {
+    const data = myForm.getValues();
     console.log(data);
 
     myForm.reset()
 
-  regModal.close();
-  alert('Регистрация прошла успешно!');
-    } else {
+    regModal.close();
+    alert('Регистрация прошла успешно!');
+  } else {
     alert('Пожалуйста, заполните все обязательные поля корректно!');
-    }
+  }
 });
 
 
