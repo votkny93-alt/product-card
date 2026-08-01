@@ -3,9 +3,12 @@ console.log("lkfhff")
 class Drink {
   #temperature;
   constructor(name, size, price, temperature) {
+    if (new.target === Drink) {
+      throw new Error("Нельзя создавать экземпляры абстрактного класса Drink!");
+    }
     this.name = name;
     this.size = size;
-    this.price = price
+    this.price = price;
     this.#temperature = temperature
   }
 
@@ -17,30 +20,30 @@ class Drink {
 
   }
   #prepare() {
-    return ("Вода нагревается")
+    return ("Вода нагревается");
 
   }
   serve() {
     const process = this.#prepare(); {
-      return (process, ('Напиток подан! Приятного аппетита!'))
+      return (process ('Напиток подан! Приятного аппетита!'))
     }
 
   }
 
   getInfo() {
-    return (`${this.name}, ${this.size}, ${this.price}`)
+    return (`${this.name}, ${this.size}, ${this.price}`);
   }
 }
 
 class Lemonade extends Drink {
   constructor(name, size, price, temperature) {
-
+    super(name, size, price, temperature)
   }
 }
 
 class Tea extends Drink {
-  construcror(name, size, price, temperature) {
-
+  constructor(name, size, price, temperature) {
+    super(name, size, price, temperature)
   }
 }
 class Coffee extends Drink {
@@ -51,10 +54,8 @@ class Coffee extends Drink {
   }
 
   getInfo() {
-    return `${super.getInfo()}, ${this.beanType}, ${this.milkType}`
+    return (`${super.getInfo()}, ${this.beanType}, ${this.milkType}`);
    }
-
-  orderDrink() { }
 }
 
 class CoffeeShop {
@@ -64,7 +65,7 @@ class CoffeeShop {
   }
 
   getCafeInfo() {
-    return `Кафе "${this.name}", ${this.address}`
+    return (`Кафе "${this.name}", ${this.address}`);
    }
 
   orderDrink(drink) {
